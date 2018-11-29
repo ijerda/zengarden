@@ -1,0 +1,450 @@
+/*------------------- IMPORTS ------------------*/
+/* --------------------------------
+
+xTypography
+
+-------------------------------- */
+@import url("https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab");
+@import "import/normalize.css";
+h1, h2, h3 {
+  font-family: "Roboto Slab", serif;
+}
+
+h1 {
+  font-size: 5rem;
+  font-weight: bold;
+  line-height: 1.2;
+  margin: 0;
+  color: #8e1414;
+}
+
+h2 {
+  font-size: 1rem;
+  color: #727271;
+  font-weight: 300;
+  margin: 0px 0px 50px 0px;
+  max-width: 695px;
+  width: 100%;
+  font-style: italic;
+}
+
+h3 {
+  font-size: 2rem;
+  color: #8e1414;
+  font-weight: 300;
+  margin: 1em 0 0 0;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #e6e6e6;
+  font-family: "Roboto", sans-serif;
+  margin: 0px 0px 12px 0px;
+}
+p a {
+  color: #fff;
+  text-decoration: underline;
+  font-weight: bold;
+}
+p a:hover {
+  color: #8e1414;
+  cursor: pointer;
+}
+p .contentinfo {
+  font-size: 2.4rem;
+}
+
+nav {
+  font-family: "Roboto", sans-serif;
+  color: #e6e6e6;
+}
+nav a {
+  color: #fff;
+}
+nav a:hover {
+  font-weight: bold;
+  color: #8e1414;
+  cursor: pointer;
+}
+
+@keyframes animStar {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-200vh);
+  }
+}
+body::after {
+  background: url("SVG/bigstars-01.svg") repeat top center;
+  content: " ";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1000vh;
+  width: 100%;
+  animation: animStar 150s linear infinite;
+  -webkit-transform: translateZ(-999px) scale(2);
+  z-index: -2;
+}
+
+body::before {
+  background: url("SVG/smallstars-02.svg") repeat top center;
+  content: " ";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1000vh;
+  width: 100%;
+  animation: animStar 300s linear infinite;
+  -webkit-transform: translateZ(-999px) scale(2);
+  z-index: -2;
+}
+
+/*------------------- VARIABLES ------------------*/
+/*------------------- CSS ------------------*/
+body {
+  background-color: #19191a;
+}
+
+.page-wrapper {
+  padding: 20px;
+  text-align: left;
+  max-width: 64rem;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+li {
+  list-style-type: none;
+}
+li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.design-selection,
+.design-archives,
+.zen-resources {
+  font-family: "Roboto", sans-serif;
+}
+.design-selection h3,
+.design-archives h3,
+.zen-resources h3 {
+  font-size: 1.5rem;
+}
+.design-selection ul,
+.design-archives ul,
+.zen-resources ul {
+  margin: 0;
+  padding: 0;
+}
+.design-selection li,
+.design-archives li,
+.zen-resources li {
+  margin: 0;
+  padding-top: 5px;
+}
+
+.design-name,
+.next,
+.viewall,
+.view-css,
+.css-resources,
+.zen-faq,
+.zen-submit,
+.zen-translations {
+  text-transform: uppercase;
+  color: #e6e6e6;
+  text-decoration: underline;
+}
+
+footer {
+  background-color: #8e1414;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+}
+footer a {
+  color: #fff;
+  padding-right: 20px;
+  text-decoration: underline;
+}
+footer a:hover {
+  color: #fff;
+  font-weight: bold;
+}
+
+.summary,
+.preamble,
+.explanation,
+.participation,
+.benefits,
+.requirements {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+/*------------------- DESKTOP ------------------*/
+@media only screen and (min-width: 960px) {
+  body {
+    background-color: #000;
+  }
+
+  .page-wrapper {
+    background-color: rgba(25, 25, 26, 0.7);
+    margin-top: 250px;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 22% 15% 63%;
+    padding: 0;
+  }
+
+  section {
+    grid-column: 2/5;
+    grid-row: 1/2;
+    margin-top: 40px;
+  }
+
+  div .main {
+    grid-row: 3/4;
+    grid-column: 2/5;
+  }
+
+  .explanation {
+    margin-top: -100px;
+  }
+
+  .benefits {
+    margin-top: -129px;
+  }
+
+  .participation {
+    margin-top: -50px;
+  }
+
+  .requirements {
+    margin-top: -197px;
+  }
+
+  aside {
+    grid-column: 1/6;
+    grid-row: 2/3;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 0px 30px;
+    margin: 65px 0px;
+  }
+  aside .sidebar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  aside .design-archives,
+aside .zen-resources {
+    padding: 0 20px;
+  }
+  aside .zen-resources ul {
+    padding-left: 0;
+  }
+  aside nav ul {
+    padding-left: 0;
+  }
+  aside h3 {
+    margin: 0px;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 30px;
+  }
+
+  footer {
+    background-color: rgba(25, 25, 26, 0);
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 100%;
+    padding: 20px;
+    margin: 40px 40px 80px 0px;
+  }
+  footer a {
+    color: #e6e6e6;
+    text-align: center;
+    padding: 0;
+  }
+  footer .zen-validate-html,
+footer .zen-validate-css,
+footer .zen-license,
+footer .zen-accessibility,
+footer .zen-github {
+    border: 4px solid #8e1414;
+    border-radius: 100%;
+    padding: 30px 0px;
+    margin: 10px;
+  }
+  footer .zen-validate-html:hover,
+footer .zen-validate-css:hover,
+footer .zen-license:hover,
+footer .zen-accessibility:hover,
+footer .zen-github:hover {
+    box-shadow: 1px 1px #8e1414, 2px 2px #8e1414, 3px 3px #8e1414, 4px 4px #8e1414, 5px 5px #8e1414, 6px 6px #8e1414;
+  }
+  footer a:hover {
+    font-weight: bold;
+    color: #e6e6e6;
+  }
+
+  /*------------------- SVGS ------------------*/
+  .page-wrapper::before {
+    content: url("SVG/satellite.svg");
+    max-width: 200px;
+    height: auto;
+    position: fixed;
+    top: 70px;
+    grid-column: 1/1;
+    grid-row: 1/2;
+    animation: slidein-sat 15s infinite alternate, rotation-sat 25s infinite linear;
+    right: 20px;
+    left: 20px;
+    z-index: -1;
+  }
+
+  @keyframes slidein-sat {
+    from {
+      margin-left: 80%;
+      width: 15%;
+    }
+    to {
+      margin-left: 0%;
+      width: 15%;
+    }
+  }
+  @keyframes rotation-sat {
+    50% {
+      transform: rotate(360deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  .explanation::before {
+    content: url("SVG/planet.svg");
+    width: 15%;
+    margin: 0px 60px;
+    height: auto;
+    position: relative;
+    top: 181px;
+    margin-left: -160px;
+    animation: rotation-planet 20s infinite linear, nudge-planet 5s linear infinite alternate;
+  }
+
+  @keyframes nudge-planet {
+    0%, 100% {
+      transform: translate(0, 0);
+    }
+    40% {
+      transform: translate(0, 25px);
+    }
+    60% {
+      transform: translate(0, 50px);
+    }
+  }
+  .participation::before {
+    content: url("SVG/ufo.svg");
+    width: 20%;
+    height: auto;
+    position: relative;
+    top: 238px;
+    left: 630px;
+    animation: rotation-ufo 5s infinite linear;
+    border-radius: 100%;
+  }
+
+  @keyframes rotation-ufo {
+    0%, 100% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(15deg);
+    }
+    80% {
+      transform: rotate(-15deg);
+    }
+  }
+  .benefits::before {
+    content: url("SVG/comets.svg");
+    width: 16%;
+    margin: 0px -160px 0px 60px;
+    top: 169px;
+    margin-left: -160px;
+    animation: nudge1-comet 5s linear infinite alternate;
+    position: relative;
+  }
+
+  @keyframes nudge1-comet {
+    0%, 100% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(0, 25px);
+    }
+    80% {
+      transform: translate(0, 50px);
+    }
+  }
+  .benefits::after {
+    content: url("SVG/comet2.svg");
+    position: relative;
+    margin: 0px;
+    top: -113px;
+    margin-left: -110px;
+    width: 10%;
+    animation: nudge2-comet 3s linear infinite alternate;
+  }
+
+  @keyframes nudge2-comet {
+    0%, 100% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(0, 35px);
+    }
+    80% {
+      transform: translate(0, 60px);
+    }
+  }
+  .requirements::before {
+    content: url("SVG/constellation.svg");
+    width: 20%;
+    height: auto;
+    position: relative;
+    top: 415px;
+    left: 590px;
+    width: 20%;
+    margin: 30px;
+    animation: rotation-c 5s infinite linear;
+  }
+
+  @keyframes rotation-c {
+    50% {
+      transform: rotate(10deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

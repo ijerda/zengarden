@@ -1,0 +1,88 @@
+/* --------------------------------
+
+xTypography
+
+-------------------------------- */
+@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab');
+
+$serif: 'Roboto Slab', serif;
+$sans: 'Roboto', sans-serif;
+$white: #fff;
+$lightgray: #e6e6e6;
+$gray: #727271;
+$darkgray: #19191a;
+$black: #000;
+$pop: #8e1414;
+$accent: #f2863d;
+
+h1, h2, h3 {
+	font-family: $serif;
+}
+
+h1 {
+	font-size: 5rem;
+	font-weight: bold;
+	line-height: 1.2;
+    margin: 0;
+    color: $pop;
+}
+
+
+
+h2 {
+    font-size: 1rem;
+    color: $gray;
+    font-weight: 300;
+    margin: 0px 0px 50px 0px;
+    max-width: 695px;
+    width: 100%;
+    font-style: italic;
+}
+
+h3 {
+    font-size: 2rem;
+    color: $pop;
+    font-weight: 300;
+    margin: 1em 0 0 0;
+}
+
+
+p {
+	font-size: 1rem;
+	line-height: 1.4;
+	color: $lightgray;
+	font-family: $sans;
+    margin: 0px 0px 12px 0px;
+    
+	a {
+		color: $white;
+        text-decoration: underline;
+        font-weight: bold;
+    }
+
+    a:hover {
+        color: $pop;
+        cursor: pointer;
+    }
+
+    .contentinfo {
+        font-size: 2.4rem;
+    }
+
+}
+
+nav {
+    font-family: $sans;
+    color: $lightgray;
+
+    a {
+        color: $white;
+    }
+
+    a:hover {
+        font-weight: bold;
+        color: $pop;
+        cursor: pointer;
+    }
+
+}

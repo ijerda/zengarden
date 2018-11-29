@@ -1,0 +1,299 @@
+/*------------------- IMPORTS ------------------*/
+@import "partials/_typography";
+@import "partials/_layout";
+@import "partials/_stars";
+@import "partials/_background";
+@import "import/normalize.css";
+
+/*------------------- VARIABLES ------------------*/
+
+/*------------------- CSS ------------------*/
+body {
+  background-color: $darkgray;
+}
+
+.page-wrapper {
+  padding: 20px;
+  text-align: left;
+  max-width: 64rem;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+li {
+  list-style-type: none;
+
+  a {
+    text-decoration: none;
+    color: $white;
+  }
+
+}
+
+
+.design-selection,
+.design-archives,
+.zen-resources {
+  font-family: $sans;
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    margin: 0;
+    padding-top: 5px;
+  }
+}
+
+.design-name,
+.next,
+.viewall,
+.view-css,
+.css-resources,
+.zen-faq,
+.zen-submit,
+.zen-translations {
+  text-transform: uppercase;
+  color: $lightgray;
+  text-decoration: underline;
+}
+
+footer {
+  background-color: $pop;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+
+  a {
+    color: $white;
+    padding-right: 20px;
+    text-decoration: underline;
+  }
+
+  a:hover {
+    color: $white;
+    font-weight: bold;
+  }
+
+}
+
+.summary,
+.preamble,
+.explanation,
+.participation,
+.benefits,
+.requirements {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+
+
+
+
+/*------------------- DESKTOP ------------------*/
+@media only screen and (min-width: 960px) {
+
+  @import "partials/_desktop";
+
+
+  /*------------------- SVGS ------------------*/
+  // SATELLITE
+  .page-wrapper::before {
+    content: url("SVG/satellite.svg");
+    max-width: 200px;
+    height: auto;
+    position: fixed;
+    top: 70px;
+    grid-column: 1 / 1;
+    grid-row: 1 / 2;
+    animation:
+      slidein-sat 15s infinite alternate,
+      rotation-sat 25s infinite linear;
+    right: 20px;
+    left: 20px;
+    z-index: -1;
+  }
+
+  @keyframes slidein-sat {
+    from {
+      margin-left: 80%;
+      width: 15%;
+    }
+
+    to {
+      margin-left: 0%;
+      width: 15%;
+    }
+  }
+
+  @keyframes rotation-sat {
+    50% {
+      transform: rotate(360deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+
+  // PLANET
+  .explanation::before {
+    content: url("SVG/planet.svg");
+    width: 15%;
+    margin: 0px 60px;
+    height: auto;
+    position: relative;
+    top: 181px;
+    margin-left: -160px;
+    animation:
+      rotation-planet 20s infinite linear,
+      nudge-planet 5s linear infinite alternate;
+  }
+
+  @keyframes nudge-planet {
+
+    0%,
+    100% {
+      transform: translate(0, 0);
+    }
+
+    40% {
+      transform: translate(0, 25px);
+    }
+
+    60% {
+      transform: translate(0, 50px);
+    }
+  }
+
+  //UFO
+  .participation::before {
+    content: url("SVG/ufo.svg");
+    width: 20%;
+    height: auto;
+    position: relative;
+    top: 238px;
+    left: 630px;
+    animation:
+      rotation-ufo 5s infinite linear;
+    border-radius: 100%;
+  }
+
+  @keyframes rotation-ufo {
+
+    0%,
+    100% {
+      transform: rotate(0deg)
+    }
+
+    50% {
+      transform: rotate(15deg);
+    }
+
+    80% {
+      transform: rotate(-15deg);
+    }
+  }
+
+  // COMETS
+  .benefits::before {
+    content: url("SVG/comets.svg");
+    width: 16%;
+    margin: 0px -160px 0px 60px;
+    top: 169px;
+    margin-left: -160px;
+    animation:
+      nudge1-comet 5s linear infinite alternate;
+    position: relative;
+  }
+
+  @keyframes nudge1-comet {
+
+    0%,
+    100% {
+      transform: translate(0, 0);
+    }
+
+    50% {
+      transform: translate(0, 25px);
+    }
+
+    80% {
+      transform: translate(0, 50px);
+    }
+  }
+
+  .benefits::after {
+    content: url("SVG/comet2.svg");
+    position: relative;
+    margin: 0px;
+    top: -113px;
+    margin-left: -110px;
+    width: 10%;
+
+    animation:
+      nudge2-comet 3s linear infinite alternate;
+  }
+
+  @keyframes nudge2-comet {
+
+    0%,
+    100% {
+      transform: translate(0, 0);
+    }
+
+    50% {
+      transform: translate(0, 35px);
+    }
+
+    80% {
+      transform: translate(0, 60px);
+    }
+  }
+
+  // CONSTELLATION
+  .requirements::before {
+    content: url("SVG/constellation.svg");
+    width: 20%;
+    height: auto;
+    position: relative;
+    top: 415px;
+    left: 590px;
+    width: 20%;
+    margin: 30px;
+    animation:
+      rotation-c 5s infinite linear;
+  }
+
+  @keyframes rotation-c {
+    50% {
+      transform: rotate(10deg);
+    }
+
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
+
+
+
+
+
+
+
+}
